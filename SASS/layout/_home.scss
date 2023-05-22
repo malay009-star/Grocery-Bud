@@ -1,0 +1,80 @@
+#main_sec {
+    width: 90%;
+    margin: auto;
+}
+
+.hero_info {
+    h1 {
+        color: $bg-color;
+    }
+    span {
+        border-bottom: 2px solid $primary-color;
+    }
+    p {
+        width: 560px;
+        font-size: 19px;
+    }
+    button {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        display: inline-block;
+        background-color: $primary-color;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@include sm-laptop {
+    #main_sec {
+        h1 {
+            // background-color: red;
+            padding-top: 2rem;
+        }
+    }
+}
+
+@include sm-tablet {
+    .hero_info {
+        h1 {
+            // background-color: red;
+            font-size: 35px;
+        }
+        p {
+            width: 100%;
+            font-size: 17px;
+        }
+        button {
+            padding: 13px 16px;
+        }
+    }
+}
+
+@include mobile {
+    #main_sec {
+        img {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+@include sm-mobile {
+    .hero_info {
+        h1 {
+            font-size: 29px;
+        }
+        p {
+            // background-color: red;
+            font-size: 15px;
+        }
+        span {
+            font-size: 19px;
+        }
+        button {
+            font-size: 14px;
+            padding: 13px 10px;
+        }
+    }
+}

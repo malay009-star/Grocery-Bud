@@ -1,0 +1,79 @@
+// all pages
+#pages_sec {
+    width: 98%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: #E2E8F0;
+    h1 {
+        position: relative;
+    }
+    h1::after {
+        position: absolute;
+        width: 108px;
+        height: 4px;
+        left: 45%;
+        top: 110%;
+        bottom: 0%;
+        content: "";
+        background-color: $primary-color;
+    }
+    #all_pages {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+#box {
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.04);
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: white;
+    }
+}
+
+@include sm-laptop {
+    #pages_sec {
+        // background-color: red;
+        h1::after {
+            left: 43%;
+        }
+    }
+}
+
+@include sm-tablet {
+    #pages_sec {
+        // background-color: red;
+        h1::after {
+            left: 38%;
+        }
+    }
+    #all_pages {
+        padding-top: 10px;
+        #box {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+@include mobile {
+    #box {
+        margin-top: 2rem;
+    }
+}
+
+@include sm-mobile {
+    #pages_sec {
+        h1 {
+            font-size: 1.7rem;
+        }
+        h1::after {
+            width: 100px;
+            left: 32%;
+            top: 100%;
+        }
+    }
+}
