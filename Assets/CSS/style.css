@@ -20,30 +20,47 @@ body {
 }
 
 .hero_info h1 {
+  font-size: 3.36rem;
   color: #252c4d;
 }
 .hero_info span {
-  border-bottom: 2px solid #F0DB51;
+  border-bottom: 2px solid #FFC727;
 }
 .hero_info p {
   width: 560px;
-  font-size: 18px;
+  font-size: 17.5px;
 }
 .hero_info button {
   font-size: 18px;
   text-align: center;
-  font-weight: 500;
   display: inline-block;
-  background-color: #F0DB51;
+  background-color: #FFC727;
   transition: all 0.3s ease;
 }
 .hero_info button:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
+@media (max-width: 1277px) {
+  .hero_info h1 {
+    font-size: 3rem;
+  }
+  .hero_info p {
+    width: 500px;
+  }
+}
+@media (max-width: 1145px) {
+  .hero_info h1 {
+    font-size: 2.7rem;
+  }
+}
 @media (max-width: 1023px) {
-  #main_sec h1 {
+  .hero_info h1 {
     padding-top: 2rem;
+  }
+  .hero_info p {
+    width: 100%;
+    font-size: 19px;
   }
 }
 @media (max-width: 750px) {
@@ -51,7 +68,6 @@ body {
     font-size: 35px;
   }
   .hero_info p {
-    width: 100%;
     font-size: 17px;
   }
   .hero_info button {
@@ -59,7 +75,15 @@ body {
   }
 }
 @media (max-width: 500px) {
-  #main_sec img {
+  .hero_info button {
+    width: 100%;
+    font-size: 17px;
+    padding: 10px 0px;
+  }
+  .hero_info button:hover {
+    transform: scale(1.03);
+  }
+  .hero_info img {
     margin-top: 2.5rem;
   }
 }
@@ -68,14 +92,14 @@ body {
     font-size: 29px;
   }
   .hero_info p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .hero_info span {
     font-size: 19px;
   }
   .hero_info button {
     font-size: 14px;
-    padding: 13px 10px;
+    width: 100%;
   }
 }
 #pages_sec {
@@ -95,7 +119,7 @@ body {
   top: 110%;
   bottom: 0%;
   content: "";
-  background-color: #F0DB51;
+  background-color: #FFC727;
 }
 #pages_sec #all_pages {
   width: 90%;

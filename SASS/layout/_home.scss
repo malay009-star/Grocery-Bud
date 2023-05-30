@@ -5,6 +5,7 @@
 
 .hero_info {
     h1 {
+        font-size: 3.36rem;
         color: $bg-color;
     }
     span {
@@ -12,26 +13,53 @@
     }
     p {
         width: 560px;
-        font-size: 18px;
+        font-size: 17.5px;
     }
     button {
         font-size: 18px;
         text-align: center;
-        font-weight: 500;
         display: inline-block;
         background-color: $primary-color;
         transition: all 0.3s ease;
         &:hover {
-            transform: scale(1.12);
+            transform: scale(1.1);
+        }
+    }
+}
+
+@include laptop {
+    .hero_info {
+        h1 {
+            // background-color: red;
+            font-size: 3rem;
+        }
+        p {
+            // background-color: yellow;
+            width: 500px;
+            // font-size: 17px;
+        }
+    }
+}
+
+@include md-laptop {
+    .hero_info {
+        h1 {
+            // background-color: red;
+            font-size: 2.7rem;
         }
     }
 }
 
 @include sm-laptop {
-    #main_sec {
+    .hero_info {
         h1 {
             // background-color: red;
+            // font-size: 3rem;
             padding-top: 2rem;
+        }
+        p {
+            width: 100%;
+            font-size: 19px;
         }
     }
 }
@@ -43,7 +71,7 @@
             font-size: 35px;
         }
         p {
-            width: 100%;
+            // width: 100%;
             font-size: 17px;
         }
         button {
@@ -53,7 +81,16 @@
 }
 
 @include mobile {
-    #main_sec {
+    .hero_info {
+        button {
+            width: 100%;
+            font-size: 17px;
+            padding: 10px 0px;
+            &:hover {
+                transform: scale(1.03);
+            }
+            // padding: 13px 10px;
+        }
         img {
             margin-top: 2.5rem;
         }
@@ -66,15 +103,16 @@
             font-size: 29px;
         }
         p {
-            // background-color: red;
-            font-size: 15px;
+            // background-colo  r: red;
+            font-size: 16px;
         }
         span {
             font-size: 19px;
         }
         button {
             font-size: 14px;
-            padding: 13px 10px;
+            // padding: 13px 100px;
+            width: 100%;
         }
     }
 }
